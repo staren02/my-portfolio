@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f6f6fef27f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo2.png" class="logo">
+                <ul>
+                    <li> <a href="#">Home</a></li>
+                    <li> <a href="#">About</a></li>
+                    <li> <a href="#">Services</a></li>
+                    <li> <a href="#">Portfolio</a></li>
+                    <li> <a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Software Engineer</p>
+                <h1>Hi,my name is <span>Staren</span> <b>Soba from Cameroon</h1>
+            </div>
+        </div>
+    </div>
+    <!-- -------about--------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/20251231_105328.png">
+                </div>
+                <div class="about-col-2">
+                     <h1 class="sub-title">About Me</h1>
+                     <p>Hi, i'm called <span><b>Staren</b></span>, a computer software engineering student from cameroon. 
+                        I am a Full-Stack Web Developer and a <span><b>Junior Software Engineer</b></span> 
+                        who enjoys building fast, responsive, and visually clean websites 
+                        for the best of experience. i specialize in <span><b>HTML, CSS, PHP, JavaScript and WordPress</b></span>,
+                        delivering full responsive and user freindly business websites, landing pages, 
+                        e-commerce solutions, UI/UX and custom WordPress designs.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('Projects')">Projects</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designing clean interfaces for Web/App</li>
+                                <li><span>Web Development</span><br>Web app Development</li>
+                                <li><span>App Development</span><br>Building Android/IOS Applications</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2025 - 2026</span><br>Internship at TECHNOVIC Technologies buea</li>
+                                <li><span>2024 - 2025</span><br>Web Development, UI/UX, small businessess and brands</li>
+                                <li><span>2023 - 2024</span><br>Full-Stack Web Development Personalized and School Projects</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Projects">
+                            <ul>
+                                <li><span>2026</span><br>Web Development Training at TECHONIC Technologies</li>
+                                <li><span>2025</span><br>DATABASE Managment Training at Chuitechma</li>
+                            </ul>
+                        </div>
+               </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------services--------- -->
+    <div id="Services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>I work with startups, businessess and personal brands to create 
+                        high-performance websites that stand out and scale.</p>
+                        <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI/UX Desing</h2>
+                    <p>I create clean out standing user interfaces for the best user experience.</p>
+                        <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-google-play"></i>
+                    <h2>App Development</h2>
+                    <p>I create fully functional, scalable and user freindly applications.</p>
+                        <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-video"></i>
+                    <h2>Video Editing</h2>
+                    <p>Use prpfertional video edits to advertise you business/Work</p>
+                        <a href="#">Learn more</a>
+                </div>
+                  <div>
+                    <i class="fa-brands fa-asymmetrik"></i>
+                    <h2>Branding</h2>
+                    <p>Create prpfertional brand Naming and Logos designs that suites your business</p>
+                        <a href="#">Learn more</a>
+                </div>
+                  <div>
+                    <i class="fa-solid fa-font-awesome"></i>
+                    <h2>Logo</h2>
+                    <p></p>Get outstandig Logo Desings create a unique identity for your Brand/Business
+                        <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------portfolio--------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/download.jpg">
+                    <div class="leyer">
+                        <h3>Social Media App</h3>
+                        <p>A Cameroon-based social media platform.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/social media.jpg">
+                    <div class="leyer">
+                        <h3>Management system</h3>
+                        <p>A stable and functional freindly nanagement system to manage your daily operations</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/Facebook.jpg">
+                    <div class="leyer">
+                        <h3>Portfolio Platforms</h3>
+                        <p>Tell people about yourself, your experience and a accomplishment.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------Contact--------- -->
+     <div id="Contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-at"></i>staren906@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+237674930954</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-github"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                    <a href="" class="btn btn2">Dowmload CV</a>
+                </div>
+                <div class="contact-right">
+                    <form action="">
+                        <input type="text" name="Name" placeholder="your Name" required>
+                        <input type="email" name="Email" placeholder="your Email" required>
+                        <textarea name="Message" rows="6" placeholder="your Message"></textarea>
+                        <button type="Submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2026 Staren. <i class="fa-solid fa-computer"></i>Precision in Code. Excellence in Design.</p>
+        </div>
+     </div>
+</body>
+</html>

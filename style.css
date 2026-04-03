@@ -315,7 +315,7 @@ a:hover::after{
     background: #ff004f;
 }
 #submit{
-    margin-left: 35%;
+    margin-left: 30%;
 }
 .contact-right form{
     width: 100%;
@@ -364,7 +364,7 @@ nav .fa-solid{
 
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url(images/phbg.png);
+        background-image: url(images/phbg1.png);
     }
     .header-text{
         margin-top: 50%;

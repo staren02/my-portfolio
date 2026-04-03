@@ -9,19 +9,22 @@
 </head>
 <body>
     <div id="header">
+        <bgimg src="images/11bg.png" alt="">
         <div class="container">
             <nav>
                 <img src="images/logo2.png" class="logo">
-                <ul>
+                <ul id="sidemenu">
                     <li> <a href="#section-about">About</a></li>
                     <li> <a href="#section-services">Services</a></li>
                     <li> <a href="#section-portfolio">Portfolio</a></li>
                     <li> <a href="#section-contact">Contact</a></li>
+                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Software Engineer</p>
-                <h1>Hi,my name is <span>Staren</span> <b>Soba from Cameroon</h1>
+                <h1>Hi, my name is <span>Staren</span> <br><b>Soba from Cameroon</h1>
             </div>
         </div>
     </div>
@@ -37,14 +40,14 @@
                      <p>Hi, i'm called <span><b>Staren</b></span>, a computer software engineering student from cameroon. 
                         I am a Full-Stack Web Developer and a <span><b>Junior Software Engineer</b></span> 
                         who enjoys building fast, responsive, and visually clean websites 
-                        for the best of experience. i specialize in <span><b>HTML, CSS, PHP, JavaScript and WordPress</b></span>,
+                        for the best of experience. i specialize in <span><b>HTML, CSS, JavaScript, PHP and WordPress</b></span>,
                         delivering full responsive and user freindly business websites, landing pages, 
                         e-commerce solutions, UI/UX and custom WordPress designs.</p>
 
                         <div class="tab-titles">
                             <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                             <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                            <p class="tab-links" onclick="opentab('Projects')">Projects</p>
+                            <p class="tab-links" onclick="opentab('projects')">Projects</p>
                         </div>
                         <div class="tab-contents active-tab" id="skills">
                             <ul>
@@ -60,7 +63,7 @@
                                 <li><span>2023 - 2024</span><br>Full-Stack Web Development Personalized and School Projects</li>
                             </ul>
                         </div>
-                        <div class="tab-contents" id="Projects">
+                        <div class="tab-contents" id="projects">
                             <ul>
                                 <li><span>2026</span><br>Web Development Training at TECHONIC Technologies</li>
                                 <li><span>2025</span><br>DATABASE Managment Training at Chuitechma</li>
@@ -148,7 +151,6 @@
             <a href="#" class="btn">see more</a>
         </div>
     </div>
-    <a href="#">Back Home</a></li>
 
     <!-- -------Contact--------- -->
      <div id="Contact">
@@ -159,26 +161,81 @@
                     <p><i class="fa-solid fa-at"></i>staren906@gmail.com</p>
                     <p><i class="fa-solid fa-phone"></i>+237674930954</p>
                     <div class="social-icons">
-                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                        <a href=""><i class="fa-brands fa-github"></i></a>
-                        <a href=""><i class="fa-brands fa-facebook"></i></a>
-                        <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.linkedin.com/in/staren02" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Staren02" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.facebook.com/Staren02" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.tiktok.com/@staren02" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
                     </div>
                     <a href="" download="c:\Users\PC\Desktop\MY PROJECTS\my-portfolioc:\Users\PC\Desktop\MY PROJECTS\my-portfolio" class="btn btn2">Dowmload CV</a>
                 </div>
                 <div class="contact-right">
-                    <form action="">
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="your Name" required>
                         <input type="email" name="Email" placeholder="your Email" required>
                         <textarea name="Message" rows="6" placeholder="your Message"></textarea>
-                        <button type="Submit" class="btn btn2">Submit</button>
+                        <span  id="msg">dgjkl</span>
+                        <button type="Submit" id="submit" class="btn btn2">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
+        <a href="#" id="back-home">Back Home</a></li>
         <div class="copyright">
             <p>&copy; 2026 Staren. <i class="fa-solid fa-computer"></i>Precision in Code. Excellence in Design.</p>
         </div>
      </div>
+
+
+    <script>
+
+        const tablinks = document.getElementsByClassName("tab-links"); 
+        const tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link"); 
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab"); 
+            }    
+            event.currentTarget.classList.add("active-link"); 
+            document.getElementById(tabname).classList.add("active-tab");
+     }
+    
+    </script>
+    
+    <script>
+
+        const sidemeu = document.getElementById("sidemenu"); 
+
+        function openmenu(){
+            sidemeu.style.right = "0";
+        }
+        function closemenu(){
+            sidemeu.style.right = "-200px";
+        }
+
+    </script>
+
+    <script>
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbxWv_Zo9QZl4wNNZReSXlR-RXDr64jdPdbN8r-qtsjXVpIrD8aCBzPElzAQ4ZORTXDD/exec'
+	const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+	form.addEventListener('submit', e => {
+		e.preventDefault()
+		fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+			.then(response => response.json())
+			.then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+            })
+			.catch(error => console.error('Error!', error.message))
+	})
+</script>
+
 </body>
 </html>
